@@ -79,6 +79,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/deploy/scripts-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/deploy/scripts-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dev/content/home-content.kit": {
 		"cB": 0,
 		"ft": 2048,
@@ -133,8 +144,8 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/dev/js/scripts-min.js",
-		"oF": 0,
+		"oAP": "/deploy/scripts-min.js",
+		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
@@ -268,7 +279,7 @@
 		"oS": 0,
 		"sct": 0
 		},
-	"/dev/scss/sections/home-content.scss": {
+	"/dev/scss/sections/_home-content.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -276,7 +287,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/dev/scss/sections/home-content.css",
+		"oAP": "/dev/scss/sections/_home-content.css",
 		"oF": 0,
 		"oS": 0,
 		"sct": 0

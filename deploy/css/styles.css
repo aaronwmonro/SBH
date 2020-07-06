@@ -543,12 +543,13 @@ header {
 }
 header div {
   display: grid;
-  grid-template-columns: 70% auto;
-  grid-template-areas: "logo burger";
+  grid-template-columns: 80% auto;
+  grid-template-areas: "logo burger" "nav nav";
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header div {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo nav";
   }
 }
 header div #logo-container {
@@ -569,10 +570,14 @@ header div #logo-container a img {
   width: 60%;
 }
 header div #nav-container {
+  background-color: black;
   display: none;
+  grid-area: nav;
+  text-decoration: none;
 }
 @media (min-width: 992px) {
   header div #nav-container {
+    background: none;
     display: grid;
     grid-template-rows: 60% auto;
     display: flex;

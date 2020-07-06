@@ -9,14 +9,16 @@ header {
     
     div {
         display: grid;
-        grid-template-columns: 70% auto;
-        grid-template-areas: "logo burger";
+        grid-template-columns: 80% auto;
+        grid-template-areas: "logo burger"
+        "nav nav";
         
        
         
 
-        @include md{
+        @include lg{
           grid-template-columns: repeat(2, 1fr);
+          grid-template-areas: "logo nav";
         }
         
         // #logo-container{
@@ -50,9 +52,12 @@ header {
         }
         
         #nav-container{
-            display: none;
-
+            background-color: black;
+			display: none;
+			grid-area: nav;
+			text-decoration: none;
             @include lg {
+                background: none;
                 display: grid;
                 grid-template-rows: 60% auto;
                 display: flex;
