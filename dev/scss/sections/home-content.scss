@@ -1,0 +1,39 @@
+/* =============
+    Home
+============= */
+#home-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+        background-image: url('../img/home/home-hero.jpg');
+        height: 50vh;
+        background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+        display: flex;
+
+        #home-content{
+            width: 300px;
+            text-align: center;
+            color: white;
+            h1{
+                font-family: 'Vollkorn', serif;
+                font-size: rem-calc(24);
+                font-weight: 500;
+                text-decoration: none;
+                border-bottom: $green solid 2px;
+
+            }
+
+            h3{font-family: 'Open Sans', sans-serif;
+                font-size: rem-calc(16);
+                font-weight: 500;
+                text-decoration: none;
+
+            }
+        }
+
+
+}

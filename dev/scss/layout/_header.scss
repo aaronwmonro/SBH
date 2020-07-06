@@ -1,0 +1,83 @@
+/* =============
+    Header
+============= */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba($color: $green, $alpha: .60);
+    
+    div {
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-template-areas: "logo burger";
+        
+       
+        
+
+        @include md{
+          grid-template-columns: repeat(2, 1fr);
+        }
+        
+        // #logo-container{
+        //     display: flex;
+        //     justify-content: flex-start;
+        //     align-items: center;
+        //     grid-area: logo;
+        //     h1{font-family: 'Vollkorn', serif;
+        //         font-weight: 600;
+        //         font-size: rem-calc(40);
+        //         color: white;
+
+        //     }
+        // }
+
+        #logo-container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            grid-area: logo;
+            
+             a{ display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img{object-fit: cover;
+                    object-position: center;
+                    height: 60%;
+                    width: 60%;
+                 }
+             }
+        }
+        
+        #nav-container{
+            display: none;
+
+            @include lg {
+                display: grid;
+                grid-template-rows: 60% auto;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            
+            
+        }
+
+        #burger-container {
+            align-items: center;
+            color: white;
+            display: flex;
+            font-size: rem-calc(35);
+            justify-content: flex-end;
+            grid-area: burger;
+            @include lg {
+				display: none !important;
+			}
+			i {
+				cursor: pointer;
+			}
+        }
+
+        
+    }
+}
