@@ -365,6 +365,15 @@ ul li {
   list-style: none;
 }
 
+.content-spacing {
+  margin: 40px 0 0;
+}
+@media (min-width: 768px) {
+  .content-spacing {
+    margin: 60px 0 0;
+  }
+}
+
 .header-container {
   display: grid;
   grid-template-columns: 15px auto 15px;
@@ -430,6 +439,26 @@ p {
 }
 
 .section-title {
+  font-family: "Vollkorn", serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+.section-content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  padding-top: 10px;
+}
+.section-content span {
   font-weight: 300;
 }
 
@@ -459,20 +488,24 @@ textarea {
 ============= */
 #nav-container #section-buttons ul {
   height: 100%;
-  align-items: center;
+  padding-top: 20px;
 }
 @media (min-width: 992px) {
   #nav-container #section-buttons ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    padding: 0vh;
   }
 }
 #nav-container #section-buttons ul li {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: right;
+  padding-right: 20px;
 }
 @media (min-width: 992px) {
   #nav-container #section-buttons ul li {
-    padding: 15px 0 15px 15px;
+    padding: 15px 0 15px 25px;
     margin-bottom: 0;
   }
 }
@@ -481,9 +514,9 @@ textarea {
 }
 #nav-container #section-buttons ul li a:link,
 #nav-container #section-buttons ul li a:visited {
-  color: #38A549;
+  color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
   text-decoration: none;
   transition: 0.25s;
@@ -493,6 +526,7 @@ textarea {
   #nav-container #section-buttons ul li a:link,
 #nav-container #section-buttons ul li a:visited {
     color: white;
+    font-size: 1.125rem;
   }
 }
 #nav-container #section-buttons ul li a:hover,
@@ -503,21 +537,25 @@ textarea {
   display: flex;
   justify-content: flex-end;
 }
-#nav-container #social-buttons ul a {
-  align-items: center;
+@media (min-width: 992px) {
+  #nav-container #social-buttons ul a {
+    align-items: center;
+  }
 }
 #nav-container #social-buttons ul li {
+  text-align: right;
   margin-bottom: 10px;
+  padding-right: 20px;
 }
 @media (min-width: 992px) {
   #nav-container #social-buttons ul li {
-    padding-left: 15px;
+    padding: 0 0 0 15px;
     margin-bottom: 0;
   }
 }
 #nav-container #social-buttons ul li a:link,
 #nav-container #social-buttons ul li a:visited {
-  color: #38A549;
+  color: #6CBE45;
   font-size: 1.6875rem;
   transition: 0.25s;
 }
@@ -539,24 +577,37 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: rgba(56, 165, 73, 0.6);
+}
+@media (min-width: 992px) {
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(108, 190, 69, 0.7);
+    border-radius: 0 0 30px 30px;
+  }
 }
 header div {
   display: grid;
-  grid-template-columns: 80% auto;
+  grid-template-columns: auto 50px;
   grid-template-areas: "logo burger" "nav nav";
 }
 @media (min-width: 992px) {
   header div {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 25% auto;
     grid-template-areas: "logo nav";
   }
 }
 header div #logo-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  grid-area: logo;
+  display: none;
+}
+@media (min-width: 992px) {
+  header div #logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: logo;
+  }
 }
 header div #logo-container a {
   display: flex;
@@ -566,14 +617,28 @@ header div #logo-container a {
 header div #logo-container a img {
   object-fit: cover;
   object-position: center;
-  height: 60%;
-  width: 60%;
+  height: 40%;
+  width: 40%;
+}
+@media (min-width: 768px) {
+  header div #logo-container a img {
+    height: 30%;
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  header div #logo-container a img {
+    height: 50%;
+    width: 50%;
+  }
 }
 header div #nav-container {
-  background-color: black;
+  background: rgba(128, 128, 128, 0.9);
   display: none;
   grid-area: nav;
   text-decoration: none;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 @media (min-width: 992px) {
   header div #nav-container {
@@ -583,15 +648,21 @@ header div #nav-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
+    width: auto;
   }
 }
 header div #burger-container {
   align-items: center;
   color: white;
   display: flex;
-  font-size: 2.1875rem;
-  justify-content: flex-end;
+  font-size: 1.875rem;
+  justify-content: center;
   grid-area: burger;
+  padding: 10px 0;
+  background-color: rgba(108, 190, 69, 0.6);
+  border-radius: 25px;
+  margin-top: 20px;
 }
 @media (min-width: 992px) {
   header div #burger-container {
@@ -605,35 +676,396 @@ header div #burger-container i {
 /* =============
     Footer
 ============= */
+footer {
+  background: rgba(108, 190, 69, 0.7);
+  z-index: 1000;
+}
+footer div {
+  display: grid;
+  grid-template-columns: 35% auto 10%;
+  grid-template-areas: "info logo social";
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0 0;
+}
+@media (min-width: 768px) {
+  footer div {
+    grid-template-columns: 20% auto 20%;
+  }
+}
+footer div #logo-container {
+  grid-area: logo;
+}
+footer div #logo-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div #logo-container a img {
+  align-items: center;
+  object-fit: cover;
+  object-position: center;
+  height: 80%;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  footer div #logo-container a img {
+    height: 50%;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  footer div #logo-container a img {
+    height: 50%;
+    width: 50%;
+  }
+}
+footer div #footer-info {
+  grid-area: info;
+}
+footer div #footer-info #name-logo {
+  font-family: "Vollkorn", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 768px) {
+  footer div #footer-info #name-logo {
+    font-size: 1.25rem;
+  }
+}
+footer div #footer-info li {
+  padding-bottom: 20px;
+  text-align: left;
+}
+footer div #footer-info li:nth-child(1) {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  footer div #footer-info li:nth-child(1) {
+    font-size: 1.5rem;
+  }
+}
+footer div #footer-info a:link,
+footer div #footer-info a:visited {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.25s;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  footer div #footer-info a:link,
+footer div #footer-info a:visited {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
+footer div #footer-info a:hover,
+footer div #footer-info a:active {
+  color: #38A549;
+}
+footer div #footer-social {
+  grid-area: social;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer div #footer-social li {
+  padding-bottom: 10px;
+}
+footer div #footer-social a:link,
+footer div #footer-social a:visited {
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.25s;
+}
+footer div #footer-social a:hover,
+footer div #footer-social a:active {
+  color: #38A549;
+}
+
 /* =============
     Home
 ============= */
+/* --------------------------
+    Home Hero
+ --------------------------*/
 #home-hero {
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../img/home/home-hero.jpg");
-  height: 50vh;
+  height: 40vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
 }
+@media (min-width: 768px) {
+  #home-hero {
+    height: 50vh;
+  }
+}
+@media (min-width: 992px) {
+  #home-hero {
+    height: 70vh;
+  }
+}
 #home-hero #home-content {
   width: 300px;
   text-align: center;
   color: white;
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  #home-hero #home-content {
+    width: 600px;
+    margin-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  #home-hero #home-content {
+    width: 900px;
+    margin-top: 40px;
+  }
 }
 #home-hero #home-content h1 {
   font-family: "Vollkorn", serif;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 500;
   text-decoration: none;
   border-bottom: #38A549 solid 2px;
+  padding-bottom: 5px;
+}
+@media (min-width: 768px) {
+  #home-hero #home-content h1 {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 992px) {
+  #home-hero #home-content h1 {
+    font-size: 3.125rem;
+  }
 }
 #home-hero #home-content h3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 500;
   text-decoration: none;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  #home-hero #home-content h3 {
+    font-size: 1.5625rem;
+    font-weight: 300;
+  }
+}
+@media (min-width: 768px) {
+  #home-hero #home-content h3 {
+    font-size: 1.75rem;
+    font-weight: 100;
+  }
+}
+
+/* --------------------------
+    Call Out
+ --------------------------*/
+@media (min-width: 768px) {
+  #call-out > div {
+    display: grid;
+    grid-template-columns: auto 700px auto;
+    grid-template-areas: ". call.";
+  }
+}
+@media (min-width: 992px) {
+  #call-out > div {
+    display: grid;
+    grid-template-columns: auto 900px auto;
+    grid-template-areas: ". call.";
+    margin-top: -20px;
+  }
+}
+#call-out > div p {
+  grid-area: call;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #38A549;
+  text-align: center;
+  line-height: 30px;
+}
+@media (min-width: 768px) {
+  #call-out > div p {
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+}
+
+/* --------------------------
+    Sections
+ --------------------------*/
+#home-buttons > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "chad chad repairs repairs" ". hydra hydra .";
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  #home-buttons > div {
+    grid-template-areas: "chad hydra repairs ";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+#home-buttons > div #chad {
+  background-image: url("../img/home/chad.jpg");
+  grid-area: chad;
+}
+#home-buttons > div #chad img {
+  color: #6CBE45;
+  width: 100px;
+}
+@media (min-width: 768px) {
+  #home-buttons > div #chad img {
+    width: 150px;
+  }
+}
+#home-buttons > div #repairs {
+  background-image: url("../img/home/repairs.jpg");
+  grid-area: repairs;
+}
+#home-buttons > div #hydra {
+  background-image: url("../img/home/hydra.jpg");
+  grid-area: hydra;
+}
+#home-buttons > div h2 {
+  text-align: center;
+}
+#home-buttons > div h2 a:link,
+#home-buttons > div h2 a:visited {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: 0.25s;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #home-buttons > div h2 a:link,
+#home-buttons > div h2 a:visited {
+    font-size: 1.5625rem;
+  }
+}
+#home-buttons > div h2 a:hover,
+#home-buttons > div h2 a:active {
+  color: #6CBE45;
+}
+#home-buttons > div .image-titles {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  #home-buttons > div .image-titles {
+    height: 200px;
+    border-radius: 10px;
+  }
+}
+
+/* --------------------------
+    Information
+ --------------------------*/
+#home-information {
+  display: grid;
+  grid-template-areas: ". hydra ." ". repair .";
+}
+@media (min-width: 768px) {
+  #home-information {
+    grid-template-columns: 30px auto 20px auto 30px;
+    grid-template-areas: ". hydra . repair .";
+  }
+}
+@media (min-width: 992px) {
+  #home-information {
+    grid-template-columns: 20% auto 40px auto 20%;
+    grid-template-areas: ". hydra . repair .";
+  }
+}
+#home-information #hydra-division {
+  grid-area: hydra;
+  margin-bottom: 20px;
+}
+#home-information #repair-division {
+  grid-area: repair;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  #home-information #repair-division iframe {
+    margin-top: 30px;
+  }
+}
+#home-information div {
+  background: rgba(108, 190, 69, 0.8);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: auto 300px auto;
+  grid-template-areas: ". con ." ". hr .";
+}
+#home-information div iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  padding-top: 20px;
+}
+#home-information div h1 {
+  font-family: "Vollkorn", serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin: 40px 0 0;
+  padding-bottom: 10px;
+  border-bottom: white 2px solid;
+}
+#home-information div h2 {
+  font-size: 1.5rem;
+}
+#home-information div a:link,
+#home-information div a:visited {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+}
+#home-information div a:link span,
+#home-information div a:visited span {
+  font-weight: 400;
+}
+#home-information div a:hover,
+#home-information div a:active {
+  color: #38A549;
+}
+#home-information div #contact {
+  width: 300px;
+  grid-area: con;
+}
+#home-information div #hours {
+  width: 300px;
+  grid-area: hr;
+  margin-bottom: 40px;
 }

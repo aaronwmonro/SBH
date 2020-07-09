@@ -17,5 +17,27 @@ p{
 }
 
 .section-title{
-    font-weight: 300;
+    font-family: 'Vollkorn', serif;
+    font-size: rem-calc(30);
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+     margin: 20px 0 0;
+    
+    
 }
+.section-content{
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(20);
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+    span{
+        font-weight: 300;
+    }
+}
+

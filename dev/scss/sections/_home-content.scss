@@ -1,6 +1,9 @@
 /* =============
     Home
 ============= */
+/* --------------------------
+    Home Hero
+ --------------------------*/
 #home-hero{
     display: flex;
     justify-content: center;
@@ -8,32 +11,258 @@
    
     
         background-image: url('../img/home/home-hero.jpg');
-        height: 50vh;
+        height: 40vh;
         background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
         display: flex;
 
+        @include md{
+            height: 50vh;
+        }
+        @include lg{
+            height: 70vh;
+        }
+
         #home-content{
             width: 300px;
             text-align: center;
             color: white;
+            margin-top: 40px;
+            
+            @include md{
+                width: 600px;
+                margin-top: 0;
+            }
+
+            @include lg{
+                width: 900px;
+                margin-top: 40px;
+            }
             h1{
                 font-family: 'Vollkorn', serif;
-                font-size: rem-calc(24);
+                font-size: rem-calc(30);
                 font-weight: 500;
                 text-decoration: none;
                 border-bottom: $green  solid 2px;
+                padding-bottom: 5px;
 
+                @include md{
+                    font-size: rem-calc(35);
+                }
+
+                @include lg{
+                    font-size: rem-calc(50);
+                }
             }
 
             h3{font-family: 'Open Sans', sans-serif;
-                font-size: rem-calc(16);
+                font-size: rem-calc(17);
                 font-weight: 500;
                 text-decoration: none;
-
+                padding-top: 10px;
+                @include md{
+                    font-size: rem-calc(25);
+                    font-weight: 300;
+                }
+                @include md{
+                    font-size: rem-calc(28);
+                    font-weight: 100;
+                }
             }
         }
 
 
+}
+/* --------------------------
+    Call Out
+ --------------------------*/
+#call-out{
+    >div{
+        @include md{display: grid;
+            grid-template-columns: auto 700px auto;
+            grid-template-areas: ". call.";}
+            @include lg{display: grid;
+                grid-template-columns: auto 900px auto;
+                grid-template-areas: ". call.";
+                margin-top: -20px;}
+        p{grid-area: call;
+            font-family: 'Open Sans', sans-serif;
+            font-size: rem-calc(16);
+            font-weight: 400;
+            color: $green;
+            text-align: center;
+            line-height: 30px;
+
+            @include md{
+                font-size: rem-calc(20);
+                line-height: 40px;
+            }
+        }
+    }
+}
+/* --------------------------
+    Sections
+ --------------------------*/
+#home-buttons{
+    
+    >div{   
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-areas: "chad chad repairs repairs"
+        ". hydra hydra .";
+        gap: 20px;
+
+        @include md{
+            grid-template-areas: "chad hydra repairs ";
+            grid-template-columns:repeat(3, 1fr);
+            gap: 30px;
+        }
+        #chad{background-image: url('../img/home/chad.jpg');
+            grid-area: chad;
+            img{color: $mint;
+                width: 100px;
+                @include md{
+                    width: 150px;
+                }
+            }
+        }
+        #repairs{background-image: url('../img/home/repairs.jpg');
+            grid-area: repairs;
+        }
+        #hydra{
+            background-image: url('../img/home/hydra.jpg');
+            grid-area: hydra;
+        }
+
+        h2{
+            text-align: center;
+                a:link,
+                a:visited {
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: rem-calc(18);
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: white;
+                    transition: 0.25s;
+                    width: 100%;
+                    @include md{
+                        font-size: rem-calc(25);
+                    }
+
+
+                }
+
+                a:hover,
+                a:active {
+                    color: $mint;
+                }
+        }
+        
+        .image-titles {
+            align-items: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            height: 100px;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+           border-radius: 5px;
+           @include md{ height: 200px;
+            border-radius: 10px;}
+        }
+    }
+}
+
+/* --------------------------
+    Information
+ --------------------------*/
+#home-information{
+    display: grid;
+    grid-template-areas: ". hydra ."
+    ". repair .";
+    @include md{
+        grid-template-columns: 30px auto 20px auto 30px;
+        grid-template-areas: ". hydra . repair .";
+    }
+    @include lg{
+        grid-template-columns: 20% auto 40px auto 20%;
+        grid-template-areas: ". hydra . repair .";
+    }
+    #hydra-division{
+        grid-area: hydra;
+        margin-bottom: 20px;
+    }
+    
+    #repair-division{
+        grid-area: repair;
+        margin-bottom: 20px;
+        @include md{
+            iframe{
+                margin-top: 30px;
+            }
+        }
+    }
+div{background: rgba($color: $mint, $alpha: .80);
+    border-radius: 15px; 
+    display: grid;
+    grid-template-columns: auto 300px auto;
+    grid-template-areas: ". con ."
+    ". hr .";
+    iframe{
+        width: 100%;
+        height: 200px;
+        border-radius: 15px;
+        padding-top: 20px;
+    }
+    
+    h1{ font-family: 'Vollkorn', serif;
+        font-size: rem-calc(28);
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        margin: 40px 0 0;
+        padding-bottom: 10px;
+        border-bottom: white 2px solid;
+    }
+
+    h2{
+        font-size: rem-calc(24);
+    }
+
+    a:link,
+    a:visited {
+        font-family: 'Open Sans', sans-serif;
+font-size: rem-calc(19);
+font-weight: 400;
+color: white;
+text-align: center;
+line-height: 30px;
+text-decoration: none;
+span{
+    font-weight: 400;
+}
+    }
+    a:hover,
+    a:active {
+        color: $green;
+    }
+     #contact{width: 300px;
+        grid-area: con;
+       
+     }
+
+     #hours{
+        width: 300px;
+        grid-area: hr;
+        margin-bottom: 40px;
+        
+     }
+
+     
+
+}
+    
 }

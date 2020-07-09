@@ -5,57 +5,61 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    background: rgba($color: $green, $alpha: .60);
-    
+    @include lg{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba($color: $mint, $alpha: .70);
+    border-radius: 0 0 30px 30px;
+    }
     div {
         display: grid;
-        grid-template-columns: 80% auto;
+        grid-template-columns: auto 50px;
         grid-template-areas: "logo burger"
-        "nav nav";
-        
-       
-        
-
-        @include lg{
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-areas: "logo nav";
+            "nav nav";
+        @include lg {
+            grid-template-columns: 25% auto;
+            grid-template-areas: "logo nav";
         }
-        
-        // #logo-container{
-        //     display: flex;
-        //     justify-content: flex-start;
-        //     align-items: center;
-        //     grid-area: logo;
-        //     h1{font-family: 'Vollkorn', serif;
-        //         font-weight: 600;
-        //         font-size: rem-calc(40);
-        //         color: white;
+        #logo-container {
+            display: none;
 
-        //     }
-        // }
-
-        #logo-container{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            grid-area: logo;
-            
-             a{ display: flex;
+            @include lg{display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                img{object-fit: cover;
+                grid-area: logo;}
+            a {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    object-fit: cover;
                     object-position: center;
-                    height: 60%;
-                    width: 60%;
-                 }
-             }
+                    height: 40%;
+                    width: 40%;
+
+                    @include md{
+                        height: 30%;
+                    width: 30%;
+                    }
+                    @include lg{
+                        height: 50%;
+                    width: 50%;
+                    }
+                }
+            }
         }
-        
-        #nav-container{
-            background-color: black;
-			display: none;
-			grid-area: nav;
-			text-decoration: none;
+
+        #nav-container {
+            background: rgba($color: grey, $alpha: .9);
+            display: none;
+            grid-area: nav;
+            text-decoration: none;
+            border-radius: 20px;
+margin-top: 20px;
+
+
             @include lg {
                 background: none;
                 display: grid;
@@ -63,26 +67,34 @@ header {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                margin: 0;
+                width: auto;
             }
-            
-            
+
+
         }
 
         #burger-container {
             align-items: center;
             color: white;
             display: flex;
-            font-size: rem-calc(35);
-            justify-content: flex-end;
+            font-size: rem-calc(30);
+            justify-content: center;
             grid-area: burger;
+            padding: 10px 0;
+            background-color: rgba($color: $mint, $alpha: .60);
+            border-radius: 25px;
+            margin-top: 20px;
+
             @include lg {
-				display: none !important;
-			}
-			i {
-				cursor: pointer;
-			}
+                display: none !important;
+            }
+
+            i {
+                cursor: pointer;
+            }
         }
 
-        
+
     }
 }
