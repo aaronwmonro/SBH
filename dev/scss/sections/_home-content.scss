@@ -78,28 +78,7 @@
     Call Out
  --------------------------*/
 #call-out{
-    >div{
-        @include md{display: grid;
-            grid-template-columns: auto 700px auto;
-            grid-template-areas: ". call.";}
-            @include lg{display: grid;
-                grid-template-columns: auto 900px auto;
-                grid-template-areas: ". call.";
-                margin-top: -20px;}
-        p{grid-area: call;
-            font-family: 'Open Sans', sans-serif;
-            font-size: rem-calc(16);
-            font-weight: 400;
-            color: $green;
-            text-align: center;
-            line-height: 30px;
-
-            @include md{
-                font-size: rem-calc(20);
-                line-height: 40px;
-            }
-        }
-    }
+    
 }
 /* --------------------------
     Sections
@@ -168,7 +147,7 @@
             height: 100px;
             justify-content: center;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-           border-radius: 5px;
+           border-radius:10px;
            @include md{ height: 200px;
             border-radius: 10px;}
         }
@@ -204,7 +183,8 @@
             }
         }
     }
-div{background: rgba($color: $mint, $alpha: .80);
+div{background-color: $mint;
+    // background: rgba($color: $mint, $alpha: .80);
     border-radius: 15px; 
     display: grid;
     grid-template-columns: auto 300px auto;

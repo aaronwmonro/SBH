@@ -506,37 +506,6 @@ p {
   font-weight: 300;
 }
 
-@media (min-width: 768px) {
-  .call-out > div {
-    display: grid;
-    grid-template-columns: auto 700px auto;
-    grid-template-areas: ". call.";
-  }
-}
-@media (min-width: 992px) {
-  .call-out > div {
-    display: grid;
-    grid-template-columns: auto 900px auto;
-    grid-template-areas: ". call.";
-    margin-top: -20px;
-  }
-}
-.call-out > div p {
-  grid-area: call;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #38A549;
-  text-align: center;
-  line-height: 30px;
-}
-@media (min-width: 768px) {
-  .call-out > div p {
-    font-size: 1.25rem;
-    line-height: 40px;
-  }
-}
-
 /* =============
     Buttons
 ============= */
@@ -565,7 +534,6 @@ textarea {
   #nav-container {
     display: grid;
     grid-template-areas: "soc" "sec";
-    gap: -20px;
   }
 }
 #nav-container #section-buttons {
@@ -579,8 +547,8 @@ textarea {
   #nav-container #section-buttons ul {
     display: flex;
     justify-content: flex-end;
-    padding: 0;
-    margin-bottom: 10px;
+    align-items: center;
+    padding: 0vh;
   }
 }
 #nav-container #section-buttons ul li {
@@ -590,7 +558,7 @@ textarea {
 }
 @media (min-width: 992px) {
   #nav-container #section-buttons ul li {
-    padding: 0 0 0 25px;
+    padding: 15px 0 15px 25px;
     margin-bottom: 0;
   }
 }
@@ -616,7 +584,7 @@ textarea {
 }
 #nav-container #section-buttons ul li a:hover,
 #nav-container #section-buttons ul li a:active {
-  color: black;
+  color: #6CBE45;
 }
 #nav-container #social-buttons {
   grid-area: soc;
@@ -638,14 +606,12 @@ textarea {
 @media (min-width: 992px) {
   #nav-container #social-buttons ul li {
     padding: 0 0 0 15px;
-    margin-top: 10px;
     margin-bottom: 0;
-    text-align: center;
   }
 }
 #nav-container #social-buttons ul li a:link,
 #nav-container #social-buttons ul li a:visited {
-  color: #6CBE45;
+  color: black;
   font-size: 1.6875rem;
   transition: 0.25s;
 }
@@ -658,7 +624,7 @@ textarea {
 }
 #nav-container #social-buttons ul li a:hover,
 #nav-container #social-buttons ul li a:active {
-  color: white;
+  color: #6CBE45;
 }
 
 /* =============
@@ -671,7 +637,7 @@ header {
 }
 @media (min-width: 992px) {
   header {
-    background: rgba(108, 190, 69, 0.8);
+    background: rgba(108, 190, 69, 0.7);
   }
 }
 header div {
@@ -720,7 +686,7 @@ header div #logo-container a img {
   }
 }
 header div #nav-container {
-  background: #404F4F;
+  background: gray;
   display: none;
   grid-area: nav;
   text-decoration: none;
@@ -731,7 +697,9 @@ header div #nav-container {
   header div #nav-container {
     background: none;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 60% auto;
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
     margin: 0;
     width: auto;
@@ -762,7 +730,7 @@ header div #burger-container i {
     Footer
 ============= */
 footer {
-  background: rgba(64, 79, 79, 0.8);
+  background: rgba(108, 190, 69, 0.7);
   z-index: 1000;
 }
 footer div {
@@ -864,7 +832,7 @@ footer div #footer-social li {
 }
 footer div #footer-social a:link,
 footer div #footer-social a:visited {
-  color: white;
+  color: black;
   font-size: 1.5rem;
   transition: 0.25s;
 }
@@ -959,6 +927,37 @@ footer div #footer-social a:active {
 /* --------------------------
     Call Out
  --------------------------*/
+@media (min-width: 768px) {
+  #call-out > div {
+    display: grid;
+    grid-template-columns: auto 700px auto;
+    grid-template-areas: ". call.";
+  }
+}
+@media (min-width: 992px) {
+  #call-out > div {
+    display: grid;
+    grid-template-columns: auto 900px auto;
+    grid-template-areas: ". call.";
+    margin-top: -20px;
+  }
+}
+#call-out > div p {
+  grid-area: call;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #38A549;
+  text-align: center;
+  line-height: 30px;
+}
+@media (min-width: 768px) {
+  #call-out > div p {
+    font-size: 1.25rem;
+    line-height: 40px;
+  }
+}
+
 /* --------------------------
     Sections
  --------------------------*/
@@ -1373,170 +1372,4 @@ footer div #footer-social a:active {
     font-size: 1.25rem;
     line-height: 40px;
   }
-}
-
-/* =============
-    Contact
-============= */
-/* --------------------------
-    Contact Hero
- --------------------------*/
-#contact-hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../img/contact/contact.jpg");
-  height: 20vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-}
-@media (min-width: 768px) {
-  #contact-hero {
-    height: 30vh;
-  }
-}
-@media (min-width: 992px) {
-  #contact-hero {
-    height: 70vh;
-    background-position: left top;
-    background-size: cover;
-  }
-}
-#contact-hero #contact-content {
-  width: 300px;
-  text-align: center;
-  color: white;
-}
-@media (min-width: 768px) {
-  #contact-hero #contact-content {
-    width: 600px;
-  }
-}
-@media (min-width: 992px) {
-  #contact-hero #contact-content {
-    width: 900px;
-  }
-}
-#contact-hero #contact-content h1 {
-  font-family: "Vollkorn", serif;
-  font-size: 1.875rem;
-  font-weight: 500;
-  text-decoration: none;
-}
-@media (min-width: 768px) {
-  #contact-hero #contact-content h1 {
-    font-size: 3.125rem;
-  }
-}
-@media (min-width: 992px) {
-  #contact-hero #contact-content h1 {
-    font-size: 4.375rem;
-  }
-}
-
-/* --------------------------
-    Contact Call Out
- --------------------------*/
-#contact-call-out > div p {
-  font-size: 1.25rem;
-}
-@media (min-width: 768px) {
-  #contact-call-out > div p {
-    font-size: 1.75rem;
-    line-height: 40px;
-  }
-}
-
-/* --------------------------
-    Contact Information
- --------------------------*/
-#home-information {
-  display: grid;
-  grid-template-areas: ". hydra ." ". repair .";
-}
-@media (min-width: 768px) {
-  #home-information {
-    grid-template-columns: 30px auto 40px auto 30px;
-    grid-template-areas: ". hydra . repair .";
-  }
-}
-@media (min-width: 992px) {
-  #home-information {
-    grid-template-columns: 20% auto 40px auto 20%;
-    grid-template-areas: ". hydra . repair .";
-  }
-}
-#home-information #hydra-division {
-  grid-area: hydra;
-  margin-bottom: 40px;
-}
-@media (min-width: 768px) {
-  #home-information #hydra-division {
-    margin-bottom: 20px;
-  }
-}
-#home-information #repair-division {
-  grid-area: repair;
-  margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  #home-information #repair-division iframe {
-    margin-top: 30px;
-  }
-}
-#home-information div {
-  background: rgba(108, 190, 69, 0.8);
-  border-radius: 15px;
-  display: grid;
-  grid-template-columns: auto 300px auto;
-  grid-template-areas: ". con ." ". hr .";
-}
-#home-information div iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 15px;
-  padding-top: 20px;
-}
-#home-information div h1 {
-  font-family: "Vollkorn", serif;
-  font-size: 1.75rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  margin: 40px 0 0;
-  padding-bottom: 10px;
-  border-bottom: white 3px solid;
-}
-#home-information div h2 {
-  font-size: 1.5rem;
-}
-#home-information div a:link,
-#home-information div a:visited {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1875rem;
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  line-height: 30px;
-  text-decoration: none;
-}
-#home-information div a:link span,
-#home-information div a:visited span {
-  font-weight: 400;
-}
-#home-information div a:hover,
-#home-information div a:active {
-  color: #38A549;
-}
-#home-information div #contact {
-  width: 300px;
-  grid-area: con;
-}
-#home-information div #hours {
-  width: 300px;
-  grid-area: hr;
-  margin-bottom: 40px;
 }

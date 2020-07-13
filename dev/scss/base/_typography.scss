@@ -15,7 +15,41 @@ p{
     margin: 0;
     padding: 0;
 }
+.sub-title{
+    font-family: 'Vollkorn', serif;
+    font-size: rem-calc(30);
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+     background-color: $mint; 
+    //  background-color: rgba($color: $mint, $alpha: .80);
+    @include lg{
+        font-size: rem-calc(35);
+    }
+}
 
+.sub-paragraph{ 
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(16);
+    font-weight: 300;
+    color: black;
+    text-align: left;
+    line-height: 25px;
+    text-decoration: none;
+    padding-top: 10px;
+
+}
+.support-title{
+    font-family: 'Vollkorn', serif;
+    font-size: rem-calc(20);
+    font-weight: 600;
+    text-decoration: none;
+    color: $green;
+    padding-top: 20px;
+    @include lg{
+        font-size: rem-calc(24);
+    }
+}
 .section-title{
     font-family: 'Vollkorn', serif;
     font-size: rem-calc(30);
@@ -41,3 +75,27 @@ p{
     }
 }
 
+.call-out{
+    >div{
+        @include md{display: grid;
+            grid-template-columns: auto 700px auto;
+            grid-template-areas: ". call.";}
+            @include lg{display: grid;
+                grid-template-columns: auto 900px auto;
+                grid-template-areas: ". call.";
+                margin-top: -20px;}
+        p{grid-area: call;
+            font-family: 'Open Sans', sans-serif;
+            font-size: rem-calc(16);
+            font-weight: 400;
+            color: $green;
+            text-align: center;
+            line-height: 30px;
+
+            @include md{
+                font-size: rem-calc(20);
+                line-height: 40px;
+            }
+        }
+    }
+}

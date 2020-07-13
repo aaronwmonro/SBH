@@ -6,11 +6,10 @@ header {
     width: 100%;
     z-index: 1000;
     @include lg{
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    background: rgba($color: $mint, $alpha: .70);
-    border-radius: 0 0 30px 30px;
+  
+    background: rgba($color: $mint, $alpha: .80);
+    
+
     }
     div {
         display: grid;
@@ -52,20 +51,20 @@ header {
         }
 
         #nav-container {
-            background: rgba($color: grey, $alpha: .9);
+            background: $metal;
             display: none;
             grid-area: nav;
             text-decoration: none;
-            border-radius: 20px;
+            border-radius: 10px;
 margin-top: 20px;
 
 
             @include lg {
                 background: none;
                 display: grid;
-                grid-template-rows: 60% auto;
-                display: flex;
-                justify-content: flex-end;
+                grid-template-rows: 50% 50%;
+                
+
                 align-items: center;
                 margin: 0;
                 width: auto;
