@@ -1,0 +1,663 @@
+/* =============
+    Hydra
+============= */
+/* --------------------------
+    Hydra Hero
+ --------------------------*/
+ #hydra-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-image: url('../img/hydra/hydra-hero.jpg');
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+    @include md {
+        height: 50vh;
+    }
+
+    @include lg {
+        height: 70vh;
+    }
+
+    #hydra-hero-text {
+        width: 300px;
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+
+        @include md {
+            width: 600px;
+            margin-top: 0;
+        }
+
+        @include lg {
+            width: 900px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-family: 'Vollkorn', serif;
+            font-size: rem-calc(30);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: $green solid 2px;
+            padding-bottom: 5px;
+
+            @include md {
+                font-size: rem-calc(40);
+            }
+
+            @include lg {
+                font-size: rem-calc(70);
+            }
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: rem-calc(17);
+            font-weight: 600;
+            text-decoration: none;
+            padding-top: 10px;
+
+            @include md {
+                font-size: rem-calc(25);
+                font-weight: 400;
+            }
+
+            @include lg {
+                font-size: rem-calc(28);
+                font-weight: 400;
+            }
+        }
+    }
+
+
+}
+
+/* --------------------------
+    Hydra Callout
+ --------------------------*/
+ #hydra-call-out {
+    >div {
+
+        p{
+            @include lg{
+                font-size: rem-calc(23);
+            }
+        }
+    }
+}
+
+/* --------------------------
+    Hydra Items
+ --------------------------*/
+#hydra-items{
+
+    >div{
+
+        >section{
+            margin-top: 100px;
+
+            
+        }
+
+       
+
+        #hha-container{
+            @include md{
+                display: grid;
+                grid-template-columns: 60% auto;
+            }
+
+            @include lg{
+                display: grid;
+                grid-template-columns: 60% auto;
+                    margin-top: 0;
+            }
+            
+            #hha-content{margin-bottom: 10px;
+                @include md{
+                    padding: 40px 0;
+                }
+
+                @include lg{
+                    padding: 120px 0;
+                }
+                h2{
+                    font-size: rem-calc(28);
+                    margin-bottom: 10px;
+                    @include md{
+                        border-radius: 25px 0 0 25px;
+                        text-align: left;
+                        padding-left: 10px;
+                    }
+
+                    @include lg{
+                        border-radius: 25px 0 0 25px;
+                        text-align: center;
+                        padding-left: 0;
+                    }
+                }
+                
+            }
+
+            #hha-image{
+                display: flex;
+                justify-content: center;
+
+
+              
+                
+                img{border-radius: 20px;
+                    object-position: center;
+                    object-fit: cover;
+                    width: 80%;
+                    height: 50vh;
+                    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                    @include md{
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                    @include lg{
+                        height: 60vh;
+                        width: 100%;
+                    }
+
+                  
+                    
+                }
+            }
+            }
+
+
+            #hhf-container{
+                @include md{
+                    display: grid;
+                    grid-template-columns: 40% auto;
+                    grid-template-areas: "hhf-img hhf";
+                }
+    
+                @include md{
+                    display: grid;
+                    grid-template-columns: 50% auto;
+                }
+                
+                #hhf-content{margin-bottom: 10px;
+                    grid-area: hhf;
+                    @include md{
+                        padding: 20px 0;
+                    }
+                    h2{
+                        font-size: rem-calc(28);
+                        margin-bottom: 10px;
+                        @include md{
+                            border-radius: 0 25px 25px 0;
+                            text-align: left;
+                            padding-left: 10px;
+                        }
+    
+                        @include lg{
+                            text-align: center;
+                            padding-left: 0;
+                        }
+                    }
+                    
+                }
+    
+                #hhf-image{
+                    display: flex;
+                    justify-content: center;
+                    grid-area: hhf-img;
+                    img{border-radius: 20px;
+                        object-position: center;
+                        object-fit: cover;
+                        width: 80%;
+                        height: 20vh;
+                        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                        @include md{
+                            height: auto;
+                            width: 100%;
+                        }
+    
+                       
+                        
+                    }
+                }
+                }
+
+                #whs-container{
+                    
+                    #whs-content{margin-bottom: 10px;
+                        grid-area: hhf;
+                        @include md{
+                            padding: 20px 0;
+                        }
+                        h2{
+                            font-size: rem-calc(28);
+                            margin-bottom: 10px;
+                           
+                        }
+                        ul{
+                            @include lg{
+                                padding: 0 100px;
+                            }
+                        }
+
+                    }
+                
+        
+                    #whs-image{
+
+                        display: flex;
+                        justify-content: center;
+                        grid-area: hhf-img;
+                        img{border-radius: 20px;
+                            object-position: center;
+                            object-fit: cover;
+                            width: 80%;
+                            height: 20vh;
+                            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                            @include md{
+                                height: auto;
+                                width: 100%;
+                            }
+                            @include lg{
+                                height: 400px;
+                                width: 100%;
+                            }
+        
+                            
+                            
+                        }
+                    }
+                    }
+
+                
+        }
+        
+    }
+
+/* --------------------------
+    Hydra Items-2
+ --------------------------*/
+ #hydra-items-2{
+
+     >div{
+
+        @include md{
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: " ac oht"
+            "csqc bgcv";
+            gap: 40px;
+        }
+
+        @include lg{
+            margin-top: 75px;
+        }
+        
+        section{
+        padding-top: 40px;
+        @include md{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        }
+
+        h2{
+            margin-bottom: 10px;
+        }
+
+        
+        .item-2-img{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                border-radius: 20px;
+                object-position: center;
+                object-fit: cover;
+                width: 80%;
+                @include md{
+                    height: 200px;
+                    width: 100%;
+                }
+                @include lg{
+                    height: 300px;
+                    width: 80%;
+                }
+            }
+        }
+        
+        #a-content{grid-area: ac;
+           
+                img{
+                    @include lg{
+                        margin-top: 20px;
+                    }
+                }
+        }
+
+        #oht-content{grid-area: oht;
+            ul{
+            li{list-style: none;
+                text-align: center;
+            }
+        }
+            
+        }
+
+        .pdf-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .pdf-button{ background-color: $yellow;
+                width: 150px;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 20px;
+                margin: 10px 0 20px;
+                
+                
+                a:link,
+                a:visited {
+                    color: white;
+                    font-size: rem-calc(14);
+                    transition: 0.25s;
+                    text-decoration: none;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                }
+    
+                a:hover,
+                a:active {
+                    color: $yellow;
+                }}
+        }
+
+        #csqc-content{
+            grid-area: csqc;
+            
+            
+            h2{
+                font-size: rem-calc(27);
+            }
+            ul{
+                li{list-style: none;
+                    text-align: center;
+                }
+            }
+        }
+
+        #bgcv-content{
+            grid-area: bgcv;
+            h2{
+                font-size: rem-calc(27);
+            }
+            ul{
+                li{list-style: none;
+                    text-align: center;
+                }
+            }
+        }
+
+     }
+ }
+
+ /* --------------------------
+    Hydra Items-3
+ --------------------------*/
+ #hydra-items-3{
+     margin-top: 60px;
+     >div{
+
+        #crsk-container{
+
+            @include md{display: grid;
+                grid-template-columns: 50% auto;
+                grid-template-areas: "text img";
+            }
+
+            @include lg{display: grid;
+                grid-template-columns: 10% 30% auto 10%;
+                grid-template-areas: ". text img .";
+            }
+
+            #crsk-content{
+                grid-area: text;
+                @include lg{
+                    padding: 40px 0;
+                }
+                h2{
+                    font-size: rem-calc(24);
+                @include md{
+                    border-radius: 25px 0 0 25px;
+                }}
+                    h3{font-size: rem-calc(20);
+                        text-align: center;
+                        padding: 10px 20px;
+                    }
+                    #top-list{
+                        padding-top: 10px;
+                    }
+                    #bottom-list{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        padding: 0 40px;
+
+                    }
+                    p{
+                        padding: 10px 0 0 0;
+                    }
+            }
+
+            #crsk-image{grid-area: img;
+                display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            @include md{
+                padding-top: 0;
+            }
+            img{box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                border-radius: 20px;
+                object-position: center;
+                object-fit: cover;
+                width: 80%;
+                @include md{ border-radius: 0 20px 20px;
+                    height: 100%;
+                    width: 100%;
+                }
+                @include lg{border-radius: 20px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            }
+
+        }
+     }
+ }
+
+ /* --------------------------
+    Hydra Items-4
+ --------------------------*/
+#hydra-items-4{
+    padding-top: 40px;
+    >div{@include md{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;}
+        
+        .pdf-button{ background-color: $yellow;
+            width: 150px;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 20px;
+            margin-top: 10px;
+            a:link,
+            a:visited {
+                color: white;
+                font-size: rem-calc(14);
+                transition: 0.25s;
+                text-decoration: none;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+            }
+
+            a:hover,
+            a:active {
+                color: $yellow;
+            }}
+
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 20px;
+            h2{width: 350px;
+                font-size: rem-calc(24);
+                @include md{
+                    width: 102%; 
+                }
+                @include lg{
+                    width: 100%; 
+                }
+            }
+
+            #bottom-image{
+                @include md{
+                    padding-top: 20px;
+                }
+            }
+
+            ul{
+                @include lg{width: 300px;}
+            }
+
+            img{ border-radius: 20px;
+                object-position: center;
+                object-fit: cover;
+                width: 80%;
+                height: 100%;
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+            }
+        }
+    }
+
+    }
+
+/* --------------------------
+    Hydra Hours
+ --------------------------*/
+
+#hydra-hours {
+    div {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+        background-color: $mint;
+        // background: rgba($color: $mint, $alpha: .80);
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: auto 300px auto;
+        grid-template-areas: ". con ."
+            ". hr ."
+            "map map map";
+
+            @include md{
+                grid-template-columns: auto 300px 300px auto ;
+                grid-template-areas: ". con map ."
+                    ". hr map .";
+                    gap: 20px;
+            }
+
+            @include lg{
+                grid-template-columns: auto 400px 400px auto ;
+                grid-template-areas: ". con map ."
+                    ". hr map .";
+                    gap: 20px;
+            }
+
+        #hydra-map {
+            grid-area: map;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            iframe {
+                width: 100%;
+                height: 200px;
+                
+               padding: 0 0 40px 0;
+               @include md{
+                   padding: 0 0 0 40px;
+                   height: 100%;
+               }
+
+               @include lg{
+                   width: 400px;
+               }
+            }
+        }
+
+        h1 {
+            font-family: 'Vollkorn', serif;
+            font-size: rem-calc(28);
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin: 40px 0 0;
+            padding-bottom: 10px;
+            border-bottom: white 2px solid;
+        }
+
+        h2 {
+            font-size: rem-calc(24);
+        }
+
+        a:link,
+        a:visited {
+            font-family: 'Open Sans', sans-serif;
+            font-size: rem-calc(19);
+            font-weight: 400;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        a:hover,
+        a:active {
+            color: $green;
+        }
+
+        #contact {
+            width: 300px;
+            grid-area: con;
+
+        }
+
+        #hours {
+            width: 300px;
+            grid-area: hr;
+            margin-bottom: 40px;
+
+        }
+
+
+
+    }
+}

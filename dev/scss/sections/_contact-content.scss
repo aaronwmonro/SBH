@@ -11,17 +11,17 @@
    
     
         background-image: url('../img/contact/contact.jpg');
-        height:20vh;
+        height:40vh;
         background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
         display: flex;
 
         @include md{
-            height: 30vh;
+            height: 40vh;
         }
         @include lg{
-            height: 70vh;
+            height: 60vh;
            background-position: left top;
            background-size: cover;
         }
@@ -43,7 +43,7 @@
             }
             h1{
                 font-family: 'Vollkorn', serif;
-                font-size: rem-calc(30);
+                font-size: rem-calc(50);
                 font-weight: 500;
                 text-decoration: none;
              
@@ -53,7 +53,8 @@
                 }
 
                 @include lg{
-                    font-size: rem-calc(70);
+                    padding-top: 50px;
+                    font-size: rem-calc(80);
                 }
             }
 
@@ -65,11 +66,22 @@
     Contact Call Out
  --------------------------*/
  #contact-call-out{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     >div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+width: 80vw;
+        @include lg{
+            width: 40vw;
+        }
        
         p{
             font-size: rem-calc(20);
-           
+           text-align: center;
             @include md{
                 font-size: rem-calc(28);
                 line-height: 40px;
@@ -80,96 +92,117 @@
 /* --------------------------
     Contact Information
  --------------------------*/
- #home-information{
-    display: grid;
-    grid-template-areas: ". hydra ."
-    ". repair .";
-    @include md{
-        grid-template-columns: 30px auto 40px auto 30px;
-        grid-template-areas: ". hydra . repair .";
-    }
-    @include lg{
-        grid-template-columns: 20% auto 40px auto 20%;
-        grid-template-areas: ". hydra . repair .";
-    }
-    #hydra-division{
-        grid-area: hydra;
-        margin-bottom: 40px;
+ #home-hours{
+    >div{display: grid;
+        grid-template-areas: ". hydra ."
+        ". hydra-2 .";
         @include md{
-            margin-bottom:20px;
+            grid-template-columns: auto 350px 40px 350px auto;
+            grid-template-areas: ". hydra . hydra-2 .";
         }
-    }
-    
-    #repair-division{
-        grid-area: repair;
-        margin-bottom: 20px;
-        @include md{
-            iframe{
-                margin-top: 30px;
+        @include lg{
+            grid-template-columns: auto 400px 40px 400px auto;
+            grid-template-areas: ". hydra . hydra-2 .";
+        }
+        #hydra-division{
+            grid-area: hydra;
+            margin-bottom: 40px;
+            width: 100%;
+
+            @include md{
+                // margin-bottom: 20px;
             }
         }
-    }
-div{background: rgba($color: $mint, $alpha: .80);
-    // background: rgba($color: $mint, $alpha: .80);
-    border-radius: 15px; 
-    display: grid;
-    grid-template-columns: auto 300px auto;
-    grid-template-areas: ". con ."
-    ". hr .";
-    iframe{
-        width: 100%;
-        height: 200px;
-        border-radius: 15px;
-        padding-top: 20px;
-    }
+
+        #hydra-division-2{
+            grid-area: hydra-2;
+            margin-bottom: 40px;
+            width: 100%;
+
+            @include md{
+                // margin-bottom: 20px;
+            }
+        }
+        
+        #repair-division{
+            width: 100%;
+            grid-area: repair;
+            margin-bottom: 20px;
+            @include md{margin-bottom: 0;
+                iframe{
+                    // margin-top: 30px;
+                }
+                
+            }
+        }
+        .home-cards{background-color: $mint;
+        // background: rgba($color: $mint, $alpha: .80);
+        border-radius: 20px; 
+       display: flex;
+       flex-direction: column;
+            width: 50px;
+        justify-content: center;
+
+        
+        
+        h1{ font-family: 'Vollkorn', serif;
+            font-size: rem-calc(28);
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin: 30px 15px 0;
+            padding-bottom: 10px;
+            border-bottom: white 2px solid;
+        }
     
-    h1{ font-family: 'Vollkorn', serif;
-        font-size: rem-calc(28);
-        font-weight: 600;
-        text-decoration: none;
-        color: white;
-        text-align: center;
-        margin: 40px 0 0;
-        padding-bottom: 10px;
-        border-bottom: white 3px solid;
-    }
-
-    h2{
-        font-size: rem-calc(24);
-        
-    }
-
-    a:link,
-    a:visited {
-        font-family: 'Open Sans', sans-serif;
-font-size: rem-calc(19);
-font-weight: 400;
-color: white;
-text-align: center;
-line-height: 30px;
-text-decoration: none;
-span{
+        h2{
+            font-size: rem-calc(24);
+        }
+    
+        a:link,
+        a:visited {
+            font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(19);
     font-weight: 400;
-}
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    span{
+        font-weight: 400;
     }
-    a:hover,
-    a:active {
-        color: $green;
-    }
-     #contact{width: 300px;
-        grid-area: con;
-       
-     }
-
-     #hours{
-        width: 300px;
-        grid-area: hr;
-        margin-bottom: 40px;
-        
-     }
-
-     
-
-}
+        }
+        a:hover,
+        a:active {
+            color: $green;
+        }
+         #contact{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+         }
+    
+         #hours{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+         }
+    
+         #maps{display: flex;
+            justify-content: center;
+           padding: 10px 0 0 0;
+            grid-area: mps;
+            // margin-bottom: 30px;
+            iframe{ 
+                // height: 200px;
+                width: 100%;
+            }
+    
+         }
+    
+         
+    
+    }}
     
 }

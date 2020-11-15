@@ -1,0 +1,581 @@
+/* =============
+    Chad
+============= */
+/* --------------------------
+    Chad Hero
+ --------------------------*/
+#chad-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-image: url('../img/chad/features.jpg');
+    height: 40vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+    @include md {
+        height: 50vh;
+    }
+
+    @include lg {
+        height: 80vh;
+        background-position: -150px top;
+        background-size: 140%;
+    }
+
+    #chad-content {
+        width: 350px;
+        text-align: center;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include md {
+            width: 500px;
+
+        }
+
+        @include lg {
+            width: 700px;
+
+        }
+
+        img {
+            padding: 0;
+            width: 100%;
+
+
+        }
+
+    }
+
+
+}
+
+/* --------------------------
+    Chad Video
+ --------------------------*/
+#chad-video {
+
+    display: grid;
+    grid-template-areas: ". video .";
+    grid-template-columns: auto 90% auto;
+
+  
+    >div {
+
+
+        grid-area: video;
+
+        section {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            grid-area: video;
+            justify-content: center;
+
+
+            iframe {
+                border-radius: 20px;
+                width: 100%;
+                height: 210px;
+
+                @include md {
+                    height: 315px;
+                    width: 560px;
+                }
+
+                @include lg {
+                    height: 675px;
+                    width: 1200px;
+                }
+            }
+        }
+    }
+}
+
+/* --------------------------
+    Chad Callout
+ --------------------------*/
+#chad-call-out {
+    >div {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "chad-img"
+            "pres-call";
+
+        @include md {
+            grid-template-columns: 60% auto;
+            grid-template-areas: "pres-call chad-img";
+            gap: 30px;
+        }
+
+        #chad-call-img {
+            grid-area: chad-img;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+
+            @include md {
+                padding-right: 0;
+            }
+
+            img {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+
+                border-radius: 20px 20px 20px 20px;
+
+                @include md {
+                    width: 100%;
+                    height: 100vh;
+
+                }
+
+            }
+        }
+
+        #chad-call {
+            grid-area: pres-call;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            #chad-svg{ display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                padding: 20px 0;
+                @include md{
+                    padding: 0 0 20px 0;
+                }
+
+            }
+
+            p {
+                grid-area: call;
+                font-family: 'Open Sans', sans-serif;
+                font-size: rem-calc(16);
+                font-weight: 400;
+                color: $green;
+                text-align: center;
+                line-height: 30px;
+
+                @include md {
+                    font-size: rem-calc(20);
+                    line-height: 40px;
+                }
+            }
+
+            h3 {
+                border-top: solid black 2px;
+                padding: 20px 0 0 0;
+                text-align: center;
+                margin: 20px 30px 0 30px;
+                font-size: rem-calc(22);
+            }
+        }
+    }
+}
+
+/* --------------------------
+    Chad Intro
+ --------------------------*/
+#chad-intro {
+    >div {
+        @include md{
+            display: grid;
+            grid-template-columns: 60% auto;
+            gap: 10px;
+            grid-template-areas: "chad chad"
+            "txt logos";
+        }
+
+        @include lg{
+            display: grid;
+            grid-template-columns: auto;
+        gap: 10px;
+            grid-template-areas: "chad"
+            "txt"
+            "logos";
+        }
+        
+        
+    
+            h1 { grid-area: chad;
+            text-align: center;
+            font-family: 'Vollkorn', serif;
+            font-size: rem-calc(32);
+            font-weight: 700;
+            color:white;
+            text-align: center;
+            background-color: $metal;
+              border-radius: 20px;
+            text-decoration: none;
+           padding: 10px 0 5px 0;
+            @include lg{
+                font-size: rem-calc(55);
+                padding: 10px 0 5px;
+                
+                margin: 0 0 0;
+            }}
+        p{
+            grid-area: txt;
+        text-align: justify;
+        padding: 10px 0 0;
+        @include lg{
+            font-size: rem-calc(18);
+            padding: 10px 60px 0;
+            line-height: 28px;
+        }
+        }
+        #chad-intro-logos{ grid-area: logos;
+            display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                @include lg{
+                    flex-direction: row;
+                }
+            section{display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                img{width: 70%;
+                    padding: 10px 0;
+
+                    @include md{
+                        width: 60%;
+                        padding: 0;
+                    }
+                    @include lg{
+                        width: 80%;
+                        padding: 0;
+                    }
+                }
+            }
+            #chad-max{
+                grid-area: max;
+            }
+            #chad-lite{
+                grid-area: lite;
+            }
+            #chad-custom{
+                grid-area: custom;
+            }
+        }
+
+    }
+}
+
+/* --------------------------
+    Chad Features
+ --------------------------*/
+
+#chad-features {
+    >div {
+        @include md {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: " txt ft1"
+                "ft2 ft2";
+            gap: 20px;
+        }
+
+        #features-content {
+            grid-area: txt;
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                padding-top: 10px;
+
+                @include md {
+                    margin-right: -20px;
+                    border-radius: 20px 0 0 20px;
+                }
+            }
+
+            ul {
+                @include md {
+                    padding-top: 10px;
+                }
+
+                li {}
+            }
+        }
+
+        #features-images {height: 100%;
+            div {
+                margin-top: 20px;
+
+                @include md {
+                    margin-top: 0;
+                }
+
+                border-radius: 20px;
+            }
+
+            #features-1 {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                background-image: url('../img/chad/chad-hero.jpg');
+                height: 200px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                grid-area: ft1;
+
+                @include md {
+                    border-radius: 0 20px 20px 20px;
+
+                
+                }
+            }
+
+            #features-2 {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                background-image: url('../img/chad/features-2.jpg');
+                height: 250px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                grid-area: ft2;
+
+                @include md {
+                    margin-top: 20px;
+                }
+
+            }
+        }
+    }
+}
+
+
+/* --------------------------
+    Chad Includes
+ --------------------------*/
+
+ #chad-includes {
+    >div {
+        @include md {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: "in2 in-txt"
+               ;
+            gap: 20px;
+        }
+
+        #includes-content {
+            grid-area: in-txt;
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 25px;
+                padding-top: 10px;
+
+                @include md {
+                    margin-left: -20px;
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+
+            ul {
+                @include md {
+                    padding-top: 10px;
+                }
+
+                li {}
+            }
+        }
+
+        #includes-images {height: 100%;
+            div {
+                margin-top: 20px;
+
+                @include md {
+                    margin-top: 0;
+                }
+
+                border-radius: 20px;
+            }
+
+            #includes-1 {box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2), 0 4px 4px 0 rgba(0, 0, 0, .2);
+                background-image: url('../img/chad/new-pic-4.JPG');
+                height: 600px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                grid-area: in1;
+
+                @include md {
+                    border-radius: 20px 0 20px 20px;
+
+                
+                }
+            }
+
+           
+        }
+    }
+}
+
+/* --------------------------
+    -slider
+ --------------------------*/
+ #chad-slides {
+    
+
+    >div {
+
+        .chad-slider {
+
+            div {
+                height: 300px;
+
+                @include md {
+                    height: 400px;
+                }
+
+                @include lg {
+                    height: 70vh;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+
+        .tns-controls [aria-controls] {
+            color: white;
+            background: $mint;
+            border-radius: 20px;
+           
+
+        }
+    }
+}
+
+/* --------------------------
+    Chad Hours
+ --------------------------*/
+
+#chad-hours {
+    div {
+        background-color: $mint;
+        // background: rgba($color: $mint, $alpha: .80);
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: auto 300px auto;
+        grid-template-areas: ". con ."
+            ". hr ."
+            "map map map";
+
+        @include md {
+            grid-template-columns: auto 300px 300px auto;
+            grid-template-areas: ". con map ."
+                ". hr map .";
+            gap: 20px;
+        }
+
+        @include lg {
+            grid-template-columns: auto 400px 400px auto;
+            grid-template-areas: ". con map ."
+                ". hr map .";
+            gap: 20px;
+        }
+
+        #chad-map {
+            grid-area: map;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            iframe {
+                width: 100%;
+                height: 200px;
+
+                padding: 0 0 40px 0;
+
+                @include md {
+                    padding: 0 0 0 40px;
+                    height: 100%;
+                }
+
+                @include lg {
+                    width: 400px;
+                }
+            }
+        }
+
+        h1 {
+            font-family: 'Vollkorn', serif;
+            font-size: rem-calc(26);
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin: 40px 0 0;
+            padding-bottom: 10px;
+            border-bottom: white 2px solid;
+        }
+
+        h2 {
+            font-size: rem-calc(24);
+        }
+
+        a:link,
+        a:visited {
+            font-family: 'Open Sans', sans-serif;
+            font-size: rem-calc(19);
+            font-weight: 400;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        a:hover,
+        a:active {
+            color: $green;
+        }
+
+        #contact {
+            width: 300px;
+            grid-area: con;
+
+        }
+
+        #hours {
+            width: 300px;
+            grid-area: hr;
+            margin-bottom: 40px;
+
+        }
+
+
+
+    }
+}

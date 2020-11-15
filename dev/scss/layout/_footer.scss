@@ -2,7 +2,8 @@
     Footer
 ============= */
 footer{
-    background: rgba($color: $metal, $alpha: .80);
+    background: rgba($color: $metal, $alpha: .85);
+    box-shadow: 10px 4px 0 0 rgba(0, 0, 0, .2), 4px 4px 0 0 rgba(0, 0, 0, .2);
     z-index: 1000;
     div{display: grid;
         grid-template-columns: 35% auto 10%;
@@ -78,7 +79,7 @@ footer{
 			}
 			a:hover,
             a:active {
-                color: $green;
+                color: black;
 			}
     }
 
@@ -101,7 +102,7 @@ footer{
         }
         a:hover,
         a:active {
-            color: $green;
+            color: black;
         }
         
     }
@@ -109,4 +110,85 @@ footer{
     }
 
 
+}
+
+#rights{
+background-color: $mint;
+    #footer-rights{
+        display: grid;
+        align-items: center;
+        padding: 10px 0;
+        justify-content: center;
+
+        @include lg{justify-content: inherit;
+            grid-template-columns: 50% auto;
+
+        }
+
+        
+       #company-container{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           @include lg{
+            justify-content: flex-start;
+           }
+        #company{
+            text-align: center;
+             color: black;
+                 font-family: 'Open Sans', sans-serif;
+                 font-size: rem-calc(15);
+                 font-weight:300;
+                 text-decoration: none;
+                 transition: 0.25s;
+                 padding-bottom: 10px;
+                 line-height: 20px;
+ 
+                 @include lg{
+                     padding-bottom: 0;
+                     font-size: rem-calc(18);
+                 }
+         }
+       }
+        #web-container{
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           
+           @include lg{
+            justify-content: flex-end;
+           }
+            #web-designer{
+            
+                text-align: right;
+                color: white;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: rem-calc(15);
+                    font-weight:300;
+                    text-decoration: none;
+                    transition: 0.25s;
+                    @include lg{
+                        font-size: rem-calc(18);
+                    }
+                a:link,
+                a:visited {
+                    color: white;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: rem-calc(16);
+                    font-weight:300;
+                    text-decoration: none;
+                    transition: 0.25s;
+                    @include lg{
+                        font-size: rem-calc(18);
+                    }
+                }
+                a:hover,
+                a:active {
+                    color:black;
+                }
+            }
+        }
+        
+
+    }
 }
